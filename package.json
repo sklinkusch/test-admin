@@ -2,7 +2,7 @@
   "name": "test-admin",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 4200 --strictPort --open",
     "build": "vite build",
     "serve": "vite preview",
     "type-check": "tsc --noEmit",
