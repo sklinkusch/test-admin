@@ -1,4 +1,4 @@
-import { Admin, Resource, ListGuesser } from "react-admin";
+import { Admin, Resource, ListGuesser, Layout } from "react-admin";
 import { dataProvider } from "./dataProvider";
 import { UsersList } from "./users";
 import { useState, useEffect } from "react";
@@ -7,6 +7,16 @@ import { ThemeOptions } from "@mui/material/styles";
 // some types
 type Listener = void | null;
 type Mode = "dark" | "light";
+
+// define custom layout without menu, appbar, and sidebar
+const MyLayout = (props: any) => (
+  <Layout
+    {...props}
+    appBar={() => null}
+    menu={() => null}
+    sidebar={() => null}
+  />
+);
 
 // basic definition of themes
 const darkTheme: ThemeOptions = {
@@ -37,10 +47,17 @@ export const App = () => {
   // states for the mode and the eventListener
   const [listener, setListener] = useState<Listener>(null);
   const [mode, setMode] = useState<Mode>("dark");
+  // set RAStore.theme manually because control elements are gone
+  localStorage.setItem("RAStore.theme", "dark");
   useEffect(() => {
     // define new event listener on local storage
     const myListener = window.addEventListener("storage", () => {
       setMode(localStorage.getItem("mode") == "1" ? "dark" : "light");
+      // set RAStore.theme menually because control elements are gone
+      localStorage.setItem(
+        "RAStore.theme",
+        localStorage.getItem("mode") == "1" ? "dark" : "light"
+      );
     });
     // store event listener in the respective state hook
     setListener(myListener);
@@ -56,6 +73,7 @@ export const App = () => {
   }, []);
   return (
     <Admin
+      layout={MyLayout}
       dataProvider={dataProvider}
       darkTheme={darkTheme}
       lightTheme={lightTheme}
