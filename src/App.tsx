@@ -64,6 +64,7 @@ export const App = () => {
     // function to remove event listener
     const removeListener = (theListener: any) => {
       window.removeEventListener("storage", theListener);
+      setListener(null);
     };
     // return the remove function -> event listener is removed before the component App is unmounted
     return removeListener(listener);
