@@ -2463,6 +2463,22 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+ra-core@^4.16.10:
+  version "4.16.10"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.16.10.tgz#6c27c52452677a44529ed91b46828227d2e85ea6"
+  integrity sha512-yZWqTCG43Qz8sr0cB8AwXVEXRSW6vueDpy7XgBo/UMnEieWa36VZIPDSB7KVUp3gLCkBYsDq0LeuJAM0XY4kow==
+  dependencies:
+    clsx "^1.1.1"
+    date-fns "^2.19.0"
+    eventemitter3 "^4.0.7"
+    inflection "~1.12.0"
+    jsonexport "^3.2.0"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^7.1.1"
+    react-is "^17.0.2"
+    react-query "^3.32.1"
+
 ra-core@^4.16.3:
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.16.3.tgz#796150ecc453bc682c1a5254e85bf80b40a2b0b4"
@@ -2479,13 +2495,13 @@ ra-core@^4.16.3:
     react-is "^17.0.2"
     react-query "^3.32.1"
 
-ra-data-json-server@^4.16.0:
-  version "4.16.3"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-4.16.3.tgz#a59e5b12c217e8b471ea35a684c390244d133946"
-  integrity sha512-hGnWN3Lc/dfAkJn5ODXa5nLKEwVf5hZwtRVaNnaB7lyH1M1Jce5oKIwB/CQQLpJBNAO+bTNVEhVoALn9g007uA==
+ra-data-json-server@^4.16.10:
+  version "4.16.10"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-4.16.10.tgz#bbfbc2613ebe868067da50857603c12f0ec8bde1"
+  integrity sha512-Zj7QEtERwwW5geeQwl9P1FQSiISUNiIOsoFgV4aT0VI4qgparB58A6vjYvUHP+CtXCNY+ZHqqpeOeXE9vdxk3g==
   dependencies:
     query-string "^7.1.1"
-    ra-core "^4.16.3"
+    ra-core "^4.16.10"
 
 ra-i18n-polyglot@^4.16.3:
   version "4.16.3"
